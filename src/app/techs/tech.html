@@ -1,0 +1,9 @@
+<div class="tech">
+  <img class="tech-logo" src="http://www.math-shirts.com/cat-sum.png" ng-src="{{ $ctrl.tech.logo }}"/>
+  <h3 class="tech-h3">
+    {{ $ctrl.tech.title }}
+  </h3>
+  <p>{{ $ctrl.tech.description }}</p>
+  <p>{{ $ctrl.tech.text2 }}</p>
+  <p ng-repeat="tag in $ctrl.tech.tags">#{{tag}}</p>
+</div>
