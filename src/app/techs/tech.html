@@ -1,9 +1,31 @@
-<div class="tech">
-  <img class="tech-logo" src="http://www.math-shirts.com/cat-sum.png" ng-src="{{ $ctrl.tech.logo }}"/>
-  <h3 class="tech-h3">
-    {{ $ctrl.tech.title }}
-  </h3>
-  <p>{{ $ctrl.tech.description }}</p>
-  <p>{{ $ctrl.tech.text2 }}</p>
-  <p ng-repeat="tag in $ctrl.tech.tags">#{{tag}}</p>
+<!--<div class="tech">-->
+  <!--<img class="tech-logo" src="http://www.math-shirts.com/cat-sum.png" ng-src="{{ $ctrl.tech.logo }}"/>-->
+  <!--<h3 class="tech-h3">-->
+    <!---->
+  <!--</h3>-->
+  <!--<p>{{ $ctrl.tech.description }}</p>-->
+  <!--<p>{{ $ctrl.tech.text2 }}</p>-->
+  <!--<p ng-repeat="tag in $ctrl.tech.tags">#{{tag}}</p>-->
+<!--</div>-->
+
+<div class="portfolio-item">
+  <div class="portfolio-box">
+    <a href="#" title="{{ $ctrl.tech.title }}" >
+      <div class="portfolio-image-wrap">
+        <div class="show-when-logged" style="position: absolute;">
+          <h1 style="top: 60px; right: 60px;"><i class=" icon fa fa-check"></i></h1>
+        </div>
+        <img src="/../../assets/images/{{$ctrl.tech.name}}.jpg" alt="{{name}}"/>
+      </div>
+      <div class="portfolio-caption-mask">
+        <div class="portfolio-caption-text">
+          <div class="portfolio-caption-tb-cell">
+            <h5 class="alt-title">{{ $ctrl.tech.title }}</h5>
+            <p>{{ $ctrl.tech.description }}</p>
+          </div>
+          <p ng-repeat="tag in $ctrl.tech.tags">#{{tag}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
 </div>

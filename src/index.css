@@ -112,3 +112,169 @@ a:hover {
   font-size: 1.5rem;
   margin: 0 0 2rem 0;
 }
+/*------------------------------------------------------------------*/
+/* Portfolio (Isotop Grid, box, Portfolio Single Page, etc...) */
+/*------------------------------------------------------------------*/
+.portfolio-grid .portfolio-item {
+  position: relative;
+  float: left;
+  width: 33.33333333333333%;
+  height: auto;
+  margin: 0px;
+  padding: 15px;
+  display: block;
+}
+
+
+@media (max-width: 1170px) {
+  .portfolio-grid .portfolio-item {
+    width: 33.33333333333333%;
+  }
+}
+
+@media (max-width: 980px) {
+  .portfolio-grid .portfolio-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid .portfolio-item {
+    width: 100%;
+  }
+}
+
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-box a.porfolio-popup {
+  display: block;
+}
+
+.portfolio-box .portfolio-image-wrap {
+  display: block;
+  transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+.portfolio-box .portfolio-image-wrap img {
+  width: 100%;
+}
+
+.portfolio-box:hover .portfolio-image-wrap {
+  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -o-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -moz-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  -webkit-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  width: 100%;
+}
+
+.portfolio-box .portfolio-caption-mask {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  z-index: 9;
+}
+
+.portfolio-box:hover .portfolio-caption-mask {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-box .portfolio-caption-mask .portfolio-caption-text {
+  bottom: -60px;
+  left: 0;
+  opacity: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  text-align: left;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.portfolio-box:hover .portfolio-caption-mask .portfolio-caption-text {
+  bottom: 30px;
+  opacity: 1;
+}
+
+
+
+.portfolio-box .portfolio-caption-mask h1, .portfolio-box .portfolio-caption-mask h2, .portfolio-box .portfolio-caption-mask h3, .portfolio-box .portfolio-caption-mask h4, .portfolio-box .portfolio-caption-mask h5, .portfolio-box .portfolio-caption-mask h6 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.portfolio-box .portfolio-caption-mask p {
+  margin-bottom: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+
+/* Portfolio Filter */
+.portfolio-filter {
+  margin: 0 0 15px;
+  padding: 0;
+  text-align: center;
+}
+
+.portfolio-filter li {
+  display: inline-block;
+  list-style: none;
+}
+
+.portfolio-filter li a {
+  display: block;
+  color: #222;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-left: 11px;
+  margin-right: 11px;
+  text-transform: uppercase;
+}
+
+.portfolio-filter li a.active {
+  color: #33ccff;
+}
+
+/* Portfolio Single Page */
+#portfolio-single .portfolio-image-wrap {
+  margin-bottom: 20px;
+}
+
+#portfolio-single .portfolio-image-wrap img {
+  width: 100%;
+}
+
+.portfolio-item-content {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.portfolio-item-content-spc {
+  margin-top: 45px;
+}
+
+.portfolio-item-content-detail li {
+  line-height: 2;
+}
+

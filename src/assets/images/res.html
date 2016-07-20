@@ -1,0 +1,378 @@
+
+<!DOCTYPE HTML>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/min/f=css/stylesheet.css"  />
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<title>'If you have ten candy bars and I ask you for six, how many would you have left?' - CartoonStock - </title>
+		
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">						
+
+		<meta name="description" content="CartoonStock - 'If you have ten candy bars and I ask you for six, how many would you have left?'">
+		<meta name="keywords" content="cartoon, cartoons, cartoonist, cartoonists, editorial and political cartoons, humourous cartoons, humor, humour, cartoon library, cartoon illustration, business cartoons, medical cartoons, doctor cartoons, office cartoons, computer cartoons, law cartoons, lawyer cartoons, history cartoons, historic cartoons, teaching cartoons, cartoons for teaching, cartoons for education, search cartoons, cartoon database">
+		<meta name="title" content="'If you have ten candy bars and I ask you for six, how many would you have left?'">
+		<script type="text/javascript" src="/javascript/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="/javascript/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/javascript/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="/javascript/jquery.carouFredSel-5.2.3.js"></script>
+		<script type="text/javascript" src="/javascript/jquery.fancybox.js"></script>
+		<link rel="stylesheet" type="text/css" href="/javascript/jquery.fancybox.css"  />
+		<script type="text/javascript" src="/javascript/jquery.magnific-popup.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/javascript/jquery.magnific-popup.css"  />		
+
+		<style>
+			#tooltip {
+			  background: white;
+			  border: 1px #7E8E7C solid;
+			  -moz-box-shadow: 0px 0px 6px #ADADAD;
+			  -webkit-box-shadow: 0px 0px 6px #ADADAD;
+			  box-shadow: 0px 0px 6px #ADADAD;
+			  position: absolute;
+			  z-index: 100;
+			  padding: 2px;
+			  /* padding: 6px 14px; */
+			  font-size: .85em;
+			  text-align: center;
+			  color: #FFFFFF;
+			  /* text-shadow: 0 1px 1px #000000; */
+			  /* -webkit-border-radius: 5px; */
+			  /* -moz-border-radius: 5px; */
+			  /* border-radius: 5px; */
+			}
+			#tooltip:after {
+			  width: 0;
+			  height: 0;
+			  border-left: 6px solid transparent;
+			  border-right: 6px solid transparent;
+			  border-top: 6px solid #333;
+			  content: '';
+			  position: absolute;
+			  left: 50%;
+			  bottom: -6px;
+			  margin-left: -6px;
+			}
+			#tooltip.top:after {
+			  border-top-color: transparent;
+			  border-bottom: 10px solid #111;
+			  top: -20px;
+			  bottom: auto;
+			}
+			#tooltip.left:after {
+			  left: 10px;
+			  margin: 0;
+			}
+			#tooltip.right:after {
+			  right: 10px;
+			  left: auto;
+			  margin: 0;
+			}
+			#inline {
+				display: none;
+				width: 400px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.simple-ajax-popup-align-top').magnificPopup({
+					type: 'iframe',
+					alignTop: true,
+					overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+				});
+
+				$('.modalboxContentPolicy').magnificPopup({
+					type: 'iframe',
+					alignTop: true,
+					overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+				});													
+
+				
+			   	var targets = $( '[rel~=tooltip]' ),
+					target  = false,
+					tooltip = false,
+					title   = false;
+
+				targets.bind( 'mouseenter', function()
+				{
+					target  = $( this );
+
+					if (target.attr('data-artist') != '')
+						tip     = '<div class="popupCaption" style="color: #626262;font-family: arial,sans-serif;font-size:13px;text-align:left;">' + target.attr( 'data-caption' ) + '</div>' + '<div class="popupArtist" style="color:#626262;width:inherit;">by ' + target.attr( 'data-artist' ) + '</div>';
+
+					if (target.attr('data-artist') == '' || target.attr('data-artist') == undefined)
+						tip     = '</div>' + '<div class="popupArtist" style="color:#626262;width:inherit;">' + target.attr( 'data-question' ) + '</div>' + '<div class="popupCaption" style="color: #626262;font-family: arial,sans-serif;font-size:13px;text-align:left;">' + target.attr( 'data-caption' ) + '</div>';
+
+					tooltip = $( '<div id="tooltip"></div>' );
+
+					if( !tip || tip == '' )
+						return false;
+
+					// target.removeAttr( 'title' );
+					tooltip.css( 'opacity', 0 )
+						   .html( tip )
+						   .appendTo( 'body' );
+
+					var init_tooltip = function()
+					{
+						if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+							tooltip.css( 'max-width', 300 );
+						else
+							tooltip.css( 'max-width', 225 );
+
+						var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+							pos_top  = target.offset().top - tooltip.outerHeight() - 20;
+
+						if( pos_left < 0 )
+						{
+							pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+							tooltip.addClass( 'left' );
+						}
+						else
+							tooltip.removeClass( 'left' );
+
+						if( pos_left + tooltip.outerWidth() > $( window ).width() )
+						{
+							pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+							tooltip.addClass( 'right' );
+						}
+						else
+							tooltip.removeClass( 'right' );
+
+						if( pos_top < 0 )
+						{
+							var pos_top  = target.offset().top + target.outerHeight();
+							tooltip.addClass( 'top' );
+						}
+						else
+							tooltip.removeClass( 'top' );
+
+						tooltip.css( { left: pos_left, top: pos_top } )
+							   .animate( { top: '+=12', opacity: 1 }, 300 );
+					};
+
+					init_tooltip();
+					$( window ).resize( init_tooltip );
+
+					var remove_tooltip = function()
+					{
+						tooltip.animate( { top: '-=12', opacity: 0 }, 100, function()
+						{
+							$( this ).remove();
+						});
+					};
+
+					target.bind( 'mouseleave', remove_tooltip );
+					tooltip.bind( 'click', remove_tooltip );
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+	<!---------- START OF POPUP ------>
+
+
+
+<!---------- END OF POPUP ------>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3788461-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<div id="wrapper">
+		<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.async=true;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<div id="nav">
+		<span class="desktop_links"><a href="/" title="Home">Home</a> | <a href="/sitesearch.asp" title="Search">Search</a> | <a href="/categories.asp" title="Categories">Categories</a> | <a href="/about.asp" title="About">About</a> | <a href="/contact_new.asp" title="Contact">Contact</a> | <a href="http://www.hireanartist.net" title="Hire An Artist">Hire An Artist</a>		</span>
+		<span class="rightNav"><img class="cart" src="//s3.amazonaws.com/siteimages.cartoonstock.com/cart.png" alt="cart" height="15" width="15" />
+			<!-- Image from http://www.famfamfam.com -->
+			<a href="/cart.asp" title="Cart">Cart (0)</a> | <a href="/pricing.asp" title="Pricing">Pricing</a> | <ul class="currencyMenu dropit" style="display:inline-block;list-style-type:none;list-style:none;"><li><a style="font-family:Arial;" href="/pricing.asp">&pound; <img src="//s3.amazonaws.com/siteimages.cartoonstock.com/flags/gb.png"> ▼</a><ul style="display:none;"><li><a style="font-family:Arial;" href="/currency/usd">$ <img src="//s3.amazonaws.com/siteimages.cartoonstock.com/flags/us.png"> </a></li><li><a style="font-family:Arial;" href="/currency/gbp">&pound; <img src="//s3.amazonaws.com/siteimages.cartoonstock.com/flags/gb.png"> </a></li><li><a style="font-family:Arial;" href="/currency/inr">₹ <img src="//s3.amazonaws.com/siteimages.cartoonstock.com/flags/in.png"> </a></li></ul></li></ul> | <a href="/login.asp" title="Log in or Sign Up">Log in or Sign Up</a>		</span>
+	</div>
+	<div id="header">
+		<a href="/" title="CartoonStock" style="outline: none; float:left;"><img style="padding:17px;" src="//s3.amazonaws.com/siteimages.cartoonstock.com/cs_splat.png" alt="CartoonStock" /></a>
+		<div class="searchBox">
+		<div class="socialMedia" style="margin-left: 0px;">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="www.cartoonstock.com" data-align="right" data-text="Explore the universe's largest cartoon database at www.CartoonStock.com" data-width="300px" data-count="horizontal" data-via="CartoonStock"></a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script><div class="fb-like" style="display:inline-block;height:21px;width:90px;" data-href="http://www.facebook.com/CartoonStockLtd" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div><div class="g-plusone" data-size="medium"></div>		</div>
+			<form name="search_top" action="/sitesearch.asp" method="get" id="searchFormInHeader">
+				<input type="hidden" value="All Categories" name="categories">
+				<input type="hidden" value="All Artists" name="artists">
+				<input type="hidden" value="mainArchive" name="mainArchive">
+				<input type="hidden" value="newsCartoon" name="newsCartoon">
+				<input type="hidden" value="vintage" name="vintage">
+				<input class="searchBoxBar" name="ANDkeyword" type="text" placeholder="Find your cartoon" id="autocomplete"/>
+				<input class="searchBoxButton" name="searchBoxButton" type="submit" value="SEARCH" />
+			</form>
+			<p>Search by Search ID or Tag or use the <a href="/sitesearch.asp">Advanced Search</a></p>
+		</div><!-- search box -->	
+		
+		<script type="text/javascript" src="/javascript/autocomplete/src/jquery.autocomplete.js"></script>
+		
+				<script>
+			$( document ).ready(function() {			 
+				$('#autocomplete').autocomplete({
+					serviceUrl: '/json/search_suggestions.php?performSearch=TRUE' + $('#autocomplete').val(),
+					onSelect: function (suggestion) {
+						$( "#searchFormInHeader" ).submit();
+					}
+				});			 
+			});
+		</script>	
+		
+		<style>
+			.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; cursor: pointer;}
+			.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+			.autocomplete-selected { background: #F0F0F0; }
+			.autocomplete-suggestions strong { font-weight: normal; color: #ff5e0e; }
+			.autocomplete-group { padding: 2px 5px; }
+			.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }		
+		</style>				
+		
+		<script>
+			$(document).ready(function() {
+			    $('.currencyMenu').dropit();
+			});
+		</script>
+
+		<script src="/javascript/dropit/dropit.js"></script>
+		<link rel="stylesheet" href="/javascript/dropit/dropit.css" type="text/css" />			
+	</div>				<div id="content">
+									
+					<div class="contentLeft">
+						<div class="leftTopLink">
+														<img src="/images/arrow.png" style="height: 12px;vertical-align: -1px;transform: rotate(180deg);ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);" title="Back to Search Results" />
+														<a href="/">Back</a>
+													</div><!-- left top link -->
+
+						<div class="cartoonLowResImage">
+							<img src="//s3.amazonaws.com/lowres.cartoonstock.com/food-drink-math-maths_lesson-math_lesson-subtracting-school-ear0671_low.jpg" alt="'If you have ten candy bars and I ask you for six, how many would you have left?'" title="'If you have ten candy bars and I ask you for six, how many would you have left?'" />							
+							<br/>
+							
+							<div style="font-size:12px;text-align: right;"><a class="modalboxContentPolicy" href="/contentpolicy.asp?catref=ear0671">Dislike this cartoon?</a></div>							
+						</div><!-- low res image -->
+												<div class="lowResImageLinks">
+							<div class="lowResImageSocial">
+								<strong>Share This Cartoon:</strong><br/>
+																
+																	<a href="https://twitter.com/share" class="twitter-share-button" data-via="cartoonstock" data-count="none"></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+									<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+									<div class="pinit" style="padding-left:10px;display:inline;"><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.jantoo.com%2Fcartoon%2Fear0671&media=http://www.jantoo.com/cartoons/lowres/ear/ear0671_low.jpg&description=%27If+you+have+ten+candy+bars+and+I+ask+you+for+six%2C+how+many+would+you+have+left%3F%27" class="pin-it-button" count-layout="none"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></div>
+									<div class="fb-like" style="display:inline-block;height:21px;width:90px;" data-href="https://www.cartoonstock.com/cartoonview.asp?catref=ear0671" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
+																
+
+							</div><!-- low res social -->
+						</div><!-- low res image links & social-->
+
+						<div id="moreCartoons">
+									<h3>More cartoons by this cartoonist</h3><div id="lowresMoreLikeArtist" class="lowresMoreLikeImages"><a href="/cartoonview.asp?catref=ear0992"><img data-caption="'The party broke up early...Brenda's mother flipped out and started screaming.'" data-artist="Edgar Argo" id="moreByArtistScrollerImage1" src="//s3.amazonaws.com/thumb93.cartoonstock.com/ear0992_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a><a href="/cartoonview.asp?catref=ear0677"><img data-caption="'I've never worked for a woman...should I call you Debbie or Ms. Enright?'" data-artist="Edgar Argo" id="moreByArtistScrollerImage2" src="//s3.amazonaws.com/thumb93.cartoonstock.com/ear0677_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a><a href="/cartoonview.asp?catref=ear0251"><img data-caption="'I worked very hard and finally got to the top of the ladder... only to find that I'd leaned it against the wrong wall.'" data-artist="Edgar Argo" id="moreByArtistScrollerImage3" src="//s3.amazonaws.com/thumb93.cartoonstock.com/ear0251_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a></div><a href="/sitesearch.asp?mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&categoriesNews=All+News+Categories&artists=125" class="lowResCarouselLinks">See more by this cartoonist</a><h3>More similar cartoons</h3><div id="lowresMoreLikeArtist" class="lowresMoreLikeImages"><a href="/cartoonview.asp?catref=csl2582"><img data-caption="In Difficulties." data-artist="George du Maurier" id="moreSimilarCartoonsScrollerImage1" src="//s3.amazonaws.com/thumb93.cartoonstock.com/csl2582_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a><a href="/cartoonview.asp?catref=ena0047"><img data-caption="Maths teacher and blackboard." data-artist="Ellis Nadler" id="moreSimilarCartoonsScrollerImage2" src="//s3.amazonaws.com/thumb93.cartoonstock.com/ena0047_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a><a href="/cartoonview.asp?catref=ndi0309"><img data-caption="&quot;Before we have our Maths lesson, a word from our sponsor&quot;" data-artist="Neil Dishington" id="moreSimilarCartoonsScrollerImage3" src="//s3.amazonaws.com/thumb93.cartoonstock.com/ndi0309_thu93.jpg" height="93" width="93" class="lowresMoreLike" rel="tooltip"></a></div><a href="/sitesearch.asp?ANDkeyword=math+maths+maths+lesson+maths+lessons+math+lesson+&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage" class="lowResCarouselLinks">See more similar cartoons</a>						</div>
+
+						
+					</div><!-- content left -->
+
+					<div class="contentRight">
+
+						<div class="rightTopLink">
+							&nbsp;
+						</div><!-- right top link -->
+
+						<h2>'If you have ten candy bars and I ask you for six, how many would you have left?'</h2><h3>						Cartoonist: Edgar Argo&nbsp;&nbsp;&nbsp;Search ID: ear0671&nbsp;&nbsp;&nbsp;High-Res: 2288 x 2056 px</h3>
+							<div style="clear:right; width: 520px; float: right;">
+													<table cellspacing="4">
+								<thead>
+									<tr class="dotted_bottom">
+										<td style="padding-left:5px">Use this cartoon for...</td>
+										<td class="right">
+											<div class="addToLightbox" style="bottom: -3px;position: relative;">
+													<a href="/addToLightbox.asp?catref=ear0671" id="addToLightboxear0671" class="simple-ajax-popup-align-top wideGreen" style="color:white;text-decoration:none;padding-left:9px;padding-right:9px;">Add to Lightbox</a>
+											</div>
+										</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr name="licenseA" id="rowSmall">
+										<td style="padding-left:5px">Gifts<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Use 1 cartoon to produce up to 3 of your own gift items, not for resale. This can be done at home, through Cafe Press/Zazzle, or anyone else you like to produce your gift items." rel="tooltip" href="/licenseagreement.asp?type=A">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=a&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;6</a></td>
+									</tr>
+									<tr name="licenseB" id="rowMedium">
+										<td style="padding-left:5px">Classroom<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Indefinite use internally within a non profit making school, college or university by one educator or student as a teaching/learning aid." rel="tooltip" href="/licenseagreement.asp?type=B">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=b&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;6</a></td>
+									</tr>
+									<tr name="licenseC" id="rowSmall">
+										<td style="padding-left:5px">Presentations / Personal Use / Newsletters<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Indefinite use where the cartoon will be used internally either within a presentation, internal newsletters with a print run of up to 1,000 or for private non-commercial use with family, friends and colleagues." rel="tooltip" href="/licenseagreement.asp?type=C">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=c&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;12</a></td>
+									</tr>
+									<tr name="licenseD" id="rowMedium">
+										<td style="padding-left:5px">Social Media<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Indefinite use at one URL, where that URL is part of a blog, a page on a social networking website or a posting on a web forum." rel="tooltip" href="/licenseagreement.asp?type=D">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=d&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;6</a></td>
+									</tr>
+									<tr name="licenseE" id="rowSmall">
+										<td style="padding-left:5px">Website / Blog / Electronic Publication<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Indefinite use at one URL or in one electronic publication." rel="tooltip" href="/licenseagreement.asp?type=E">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=e&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;30</a></td>
+									</tr>
+									<tr name="licenseF" id="rowMedium">
+										<td style="padding-left:5px">Publishing<br/><span style="font-size:10px;"><a data-question="What does this license include?" data-caption="Use in printed and electronic publications" rel="tooltip" href="/licenseagreement.asp?type=F">License Summary</a></span></td>
+										<td class="right"><a href="/licenseOptions.asp?type=f&catref=ear0671" class="simple-ajax-popup-align-top wide" style="color: white;text-decoration: none;display: inline-block;text-align: center;width: 161px;height: 17px;">Buy now <span style="font-size:8px;">from</span> &pound;30</a></td>
+									</tr>
+								</tbody>
+							</table>
+
+							
+																								<div class="lowResInfo">
+										<div class="lowResInfoLeft">
+										<h4>Cartoon Information</h4>
+											<span class="lowResLighter">Cartoonist:</span><br>
+											<span class="lowResDarker">Edgar Argo - <a href="/sitesearch.asp?mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&categoriesNews=All+News+Categories&artists=125">view all</a></span><br>
+											<span class="lowResLighter">Search ID:</span><br>
+											<span class="lowResDarker">ear0671</span><br>
+											<span class="lowResLighter">Upload date:</span><br>
+											<span class="lowResDarker">07 Aug 2008</span>
+										</div>
+										<div class="lowResInfoRight">
+											<h4>Cartoon Tags</h4>
+											<span class="lowResLighter">Categories:</span><br>
+											<a href="sitesearch.asp?mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=Food/Drink">Food/Drink</a><br><a href="sitesearch.asp?mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=Children">Children</a><br><a href="sitesearch.asp?mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=Education/Teaching">Education/Teaching</a><br>											<span class="lowResLighter">Keywords:</span><br>
+											<a href="/sitesearch.asp?ANDkeyword=math&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">math</a>, <a href="/sitesearch.asp?ANDkeyword=maths&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">maths</a>, <a href="/sitesearch.asp?ANDkeyword=maths lesson&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">maths lesson</a>, <a href="/sitesearch.asp?ANDkeyword=maths lessons&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">maths lessons</a>, <a href="/sitesearch.asp?ANDkeyword=math lesson&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">math lesson</a>, <a href="/sitesearch.asp?ANDkeyword=math lessons&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">math lessons</a>, <a href="/sitesearch.asp?ANDkeyword=subtracting&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">subtracting</a>, <a href="/sitesearch.asp?ANDkeyword=taking away&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">taking away</a>, <a href="/sitesearch.asp?ANDkeyword=school&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">school</a>, <a href="/sitesearch.asp?ANDkeyword=schools&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">schools</a>, <a href="/sitesearch.asp?ANDkeyword=schooling&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">schooling</a>, <a href="/sitesearch.asp?ANDkeyword=education&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">education</a>, <a href="/sitesearch.asp?ANDkeyword=educated&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">educated</a>, <a href="/sitesearch.asp?ANDkeyword=educate&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">educate</a>, <a href="/sitesearch.asp?ANDkeyword=educates&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">educates</a>, <a href="/sitesearch.asp?ANDkeyword=educator&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">educator</a>, <a href="/sitesearch.asp?ANDkeyword=educators&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">educators</a>, <a href="/sitesearch.asp?ANDkeyword=teacher&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">teacher</a>, <a href="/sitesearch.asp?ANDkeyword=teachers&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">teachers</a>, <a href="/sitesearch.asp?ANDkeyword=teaching&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">teaching</a>, <a href="/sitesearch.asp?ANDkeyword=teach&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">teach</a>, <a href="/sitesearch.asp?ANDkeyword=teaches&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">teaches</a>, <a href="/sitesearch.asp?ANDkeyword=pupil&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">pupil</a>, <a href="/sitesearch.asp?ANDkeyword=pupils&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">pupils</a>, <a href="/sitesearch.asp?ANDkeyword=student&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">student</a>, <a href="/sitesearch.asp?ANDkeyword=students&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">students</a>, <a href="/sitesearch.asp?ANDkeyword=candy&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">candy</a>, <a href="/sitesearch.asp?ANDkeyword=candy bars&mainArchive=mainArchive&newsCartoon=newsCartoon&vintage=vintage&categories=All+Categories&artists=All+Artists&submit1=Search">candy bars</a>.										</div>
+									</div>
+													</div><!-- content right -->
+				</div><!-- content -->
+			<footer><div id="footerLinks"><p class="bottom"><strong>Customer Home</strong><br><a href="/login.asp" title="Log in">Log in</a><br><a href="/myaccount.asp" title="My Account">My Account</a><br><a href="/lightboxes.asp" title="My Lightboxes">My Lightboxes</a><br><a href="/pricing.asp" title="Pricing">Pricing</a><br><a href="/licenseagreement.asp" title="Licensing Agreement">Licensing Agreement</a><br></p><p class="bottom2"><strong>Cartoons</strong><br><a href="/cartoonists.asp" title="Cartoonists">Cartoonists</a><br><a href="/categories.asp" title="Categories">Categories</a><br><a href="/keywords.asp" title="Keywords">Keywords</a><br><a href="/sitesearch.asp" title="Search">Search</a><br><a href="/mobile" title="Mobile">Mobile</a><br></p><p class="bottom3"><strong>Need Help?</strong><br><a href="/contact_new.asp" title="Contact Us">Contact Us</a><br><a href="/faq.asp" title="FAQ">FAQ</a><br><a href="/searchtips.asp" title="Search Tips">Search Tips</a><br><a href="/about.asp" title="About Us">About Us</a><br><a href="/terms.asp" title="Terms & Conditions">Terms & Conditions</a><br><a href="/content_policy.asp" title="Content Policy">Content Policy</a><br><a href="/privacy.asp" title="Privacy Policy">Privacy Policy</a><br></p><div class="copyright"><p>&copy; CartoonStock Ltd. 2016<br/>All Rights Reserved.</p><div class="footerLogo"><a href="/" title="CartoonStock"><img src="//s3.amazonaws.com/siteimages.cartoonstock.com/splat_white.png" alt="CartoonStock" /></a></div></div><div class="acceptedPayments" style="text-align: right;"><img src="//s3.amazonaws.com/siteimages.cartoonstock.com/creditCardImages.png" height="64" width="444"/><br><a href="https://www.securitymetrics.com/site_certificate?id=1309086&amp;tk=87ef1dd041a03aab512f0d1189335a23" target="_blank" style="margin-right: 6px;position: relative;top: -5px;"><img src="https://www.securitymetrics.com/static/img/site_certified_logos/Credit_Card_Safe_dark.png" alt="SecurityMetrics Credit Card Safe"></a></div></div><br/></footer><script type="text/javascript" src="/javascript/jquery.cookiebar.js"></script><link rel="stylesheet" type="text/css" href="/javascript/jquery.cookiebar.css"  /><script>$(document).ready(function(){	$.cookieBar({fixed: true, append: true, bottom: true});});</script>		</div><!-- wrapper -->
+
+		<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+		
+								
+		
+				
+	</body>
+</html>

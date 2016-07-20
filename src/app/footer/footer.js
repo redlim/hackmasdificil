@@ -1,5 +1,6 @@
 angular
   .module('app')
   .component('fountainFooter', {
-    templateUrl: 'app/footer.html'
+    templateUrl: 'app/footer/footer.html'
   });
+  

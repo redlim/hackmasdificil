@@ -11,5 +11,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       template: '<app></app>'
-    });
+    }).state('login', {
+      url: '/login',
+      template: '<login-summer></login-summer>'
+  });
 }
+        
